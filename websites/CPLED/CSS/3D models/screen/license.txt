@@ -1,0 +1,11 @@
+Model Information:
+* title:	Studio Option | 9m LED Screen
+* source:	https://sketchfab.com/3d-models/studio-option-9m-led-screen-fcf091f0e4134e6997509b3e3bdf7446
+* author:	groove (https://sketchfab.com/grooveyardevents)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Studio Option | 9m LED Screen" (https://sketchfab.com/3d-models/studio-option-9m-led-screen-fcf091f0e4134e6997509b3e3bdf7446) by groove (https://sketchfab.com/grooveyardevents) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

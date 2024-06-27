@@ -1,0 +1,348 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="CSS/fit-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Rye&display=swap" rel="stylesheet">
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuilding</title>
+</head>
+<body>    
+
+  <div class="loading-animation"></div>
+
+                    <!-- SIDE MENU -->
+    <div class="nav-container">       
+
+
+        <div class="border-link-container">
+            <a class="border-link" href="fit-index.html">about me</a>
+        </div>
+        <div class="border-link-container">
+            <a class="border-link" href="routines.html">Routines</a>
+        </div>
+        <div class="border-link-container">
+            <a class="border-link" href="nutrition.html">nutrition</a>
+        </div>      
+        <div class="border-link-container" id="go-back">
+            <a class="border-link" href="../index.html">back to portfolio</a>
+        </div>
+    </div> 
+
+                <!-- BURGER BUTTON -->
+    <svg class="vbp-header-menu-button__svg">
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="top" shape-rendering="crispEdges" />
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="middle" shape-rendering="crispEdges" />
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="bottom" shape-rendering="crispEdges" />
+    </svg>
+
+
+    <!-- TEXT  -->
+    <div class="main hidden">
+        <div id="title-box" class="fit-title">
+            <h1 id="fit-title-p">Training plans</h1>
+            
+            <h3 id="fit-subtitle"> For Human people</h3>
+        </div>
+    
+        <div class="introduction-plans">
+            <article>
+                Unlocking Your Ultimate Potential: The Art of Sculpting Your Dream Physique
+    
+                In the ever-evolving landscape of fitness and wellness, the pursuit of a dream physique stands as a testament to one's commitment to self-improvement. As the dawn of personalized training approaches, a paradigm shift is underway, where generic fitness regimens make way for tailored experiences that amplify results. Enter the world of Human Persona, Personal Trainers—a fusion of cutting-edge AI-backed guidance and the intuitive understanding of a seasoned mentor. In this exploration, we delve into the revolutionary Group Plan and the groundbreaking P2P Plan (Peer-to-Peer), both orchestrated to transform your aspirations into tangible, sculpted reality. Join us as we journey through these innovative fitness avenues, each designed to illuminate the path towards your fitness zenith.
+            </article>
+        </div>
+        <!-- FIRST OPTION -->
+      
+
+            <div class="hidden" id="small-pic">
+                <img src="CSS/img/group-plan-2.png" alt="No picture found">
+            </div>
+            <div id="big-pic">
+                <div id="group-container">
+                    <div id="group">
+                        <h3 class="fit-subtitle" id="group-subtitle">Group training</h3>
+                        <article>
+                            Group Plan:
+                            Embark on a transformative fitness journey with our innovative Group Plan. Harness the power of collective motivation as you join a dynamic community of like-minded individuals, all working towards sculpting their ideal physiques. Under the guidance of our expert Human Persona, Personal Trainer, you'll engage in exhilarating group workouts, synergistically designed to challenge and elevate each participant. Through meticulously curated exercises and expertly choreographed routines, our Group Plan not only fosters camaraderie but also delivers tailored results that cater to various fitness levels. Witness the harmony of camaraderie and progress, all while being sculpted towards your dream physique.
+                        </article>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- BUFFER -->
+
+            <div class="col-12" id="buffer-bar"></div>
+
+        <!-- SECOND OPTION -->
+        <div id="p2p-container">
+            
+
+            <div id="solo-small">
+                <img src="CSS/img/personal-plan.png" alt="No picture found">
+            </div>
+            <div id="solo-big">
+                <div id="p2p">
+                    <h3 class="fit-subtitle" id="p2p-subtitle">Peer to Peer Training(P2P)</h3>
+                    <article>
+                        P2P Plan (Peer-to-Peer):
+                        Experience the epitome of personalized fitness transformation with our cutting-edge P2P Plan, a revolutionary peer-to-peer engagement approach. With this plan, you'll be directly connected to your dedicated Human Persona, Personal Trainer—a mentor, motivator, and ally on your journey to a sculpted physique. Your trainer will delve deep into your aspirations, crafting an intricate blueprint that aligns with your goals, preferences, and physical condition. Each workout is meticulously tailored to your unique needs, ensuring maximal efficiency and results. Beyond the workouts, your Personal Trainer becomes a beacon of guidance, providing nutritional insights, real-time progress tracking, and unwavering support. The P2P Plan epitomizes individualization, revolutionizing your fitness voyage to manifest your envisioned physique.
+                    </article>
+                </div>   
+                <img src="CSS/img/personal-plan-2.png" alt="No picture found">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="col-12 footer">
+        <div class="col-12" id="banner">
+            <span class="banner letters">for more information, visit my <a target="_blank" href="https://github.com/ibenedetti?tab=repositories">github</a> for more information, visit my <a target="_blank" href="https://github.com/ibenedetti?tab=repositories">github</a> for more information, visit my <a target="_blank" href="https://github.com/ibenedetti?tab=repositories">github</a> </span>            
+        </div>
+        <div class="contact-text">
+            <article>
+                Ready to level up your fitness game? Feel free to reach out to me anytime for the lowdown on my personalized training plans, pricing details, and the awesome services I bring to the table. Let's crush those fitness goals together! 
+            </article>
+        </div>
+
+        <div class="form-container">
+            <form action="submitt" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="phone" name="phone" placeholder="Your Phone number" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Message" class="input-field" spellcheck="false"></textarea>
+                <button type="submit">Contact me</button>
+            </form>
+        </div>
+
+        
+
+    </footer>
+
+
+   
+
+    
+    
+    
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+    
+      let mm = gsap.matchMedia();
+    
+      mm.add("(min-width: 800px)", () => {
+        // Group Container Animation
+        let timeLine = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#group-container", 
+            start: "0",
+            scrub: 1,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        timeLine.addLabel("start")
+          .to("#group-container", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1,
+            y: -200, 
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+    
+        // P2P Container Animation
+        let timeLineP2P = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#p2p-container", 
+            start: "0",
+            scrub: 1,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        timeLineP2P.addLabel("start")
+          .to("#p2p-container", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1,
+            y: -50, 
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+    
+        // Solo Small Animation
+        let soloMove = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#solo-small", 
+            start: "0",
+            scrub: 1,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        soloMove.addLabel("start")
+          .to("#solo-small", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1,
+            x: 500,
+            y: 900,
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+    
+        // Solo Big Animation
+        let soloBig = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#solo-big", 
+            start: "0",
+            scrub: 1,
+            opacity: 0,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        soloBig.addLabel("start")
+          .to("#solo-big", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1,
+            x: -300,
+            y: 400,
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+    
+        // Small Pic Animation
+        let smallPic = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#small-pic", 
+            start: "0",
+            scrub: 1,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        smallPic.addLabel("start")
+          .to("#small-pic", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1,
+            x: 100,
+            y: 600,
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+    
+        // Big Pic Animation
+        let bigPic = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#big-pic", 
+            start: "0",
+            scrub: 1,
+            opacity: 0,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        bigPic.addLabel("start")
+          .to("#big-pic", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1,
+            x: 250,
+            y: -200,
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+    
+        // Buffer Bar Animation
+        let buffBar = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#buffer-bar", 
+            start: "0",
+            scrub: 1,
+            opacity: 0,
+            stagger: 0.5,
+            snap: {
+              snapTo: "labels", 
+              duration: 5, 
+              ease: "power1.inOut"
+            }
+          }
+        });
+    
+        buffBar.addLabel("start")
+          .to("#buffer-bar", {
+            duration: 3,
+            scrub: 1,
+            opacity: 1, 
+            y: 300,
+            start: 1, 
+            end: 0, 
+            ease: "inout"
+          })
+          .addLabel("end");
+      });
+    </script>
+    <script src="JS/app.js"></script>
+</body>
+</html>

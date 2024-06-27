@@ -1,0 +1,142 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="CSS/fit-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Rye&display=swap" rel="stylesheet">
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuilding</title>
+</head>
+<body class="small-body">    
+
+    <div class="loading-animation"></div>
+
+                        <!-- SIDE MENU -->
+    <div class="nav-container">       
+
+
+        <div class="border-link-container">
+            <a class="border-link" href="training-plans.html">training plans</a>
+        </div>
+        <div class="border-link-container">
+            <a class="border-link" href="fit-index.html">about me</a>
+        </div>
+        <div class="border-link-container">
+            <a class="border-link" href="nutrition.html">nutrition</a>
+        </div>      
+        <div class="border-link-container" id="go-back">
+            <a class="border-link" href="../index.html">back to portfolio</a>
+        </div>
+    </div> 
+
+                <!-- BURGER BUTTON -->
+    <svg class="vbp-header-menu-button__svg">
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="top" shape-rendering="crispEdges" />
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="middle" shape-rendering="crispEdges" />
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="bottom" shape-rendering="crispEdges" />
+    </svg>
+
+    <!-- ROUTINES SEARCHBAR -->
+    <div class="main">
+        <div id="title-box" class="routine-title">
+            <h1 id="routine-title-p">Training routines</h1>
+        </div>
+    
+        <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button id="searchButton">Search</button>
+        </div>
+            <div id="results"></div>
+        
+
+    </div>
+    
+
+
+    <footer class="col-12 footer">
+        <div class="col-12" id="banner">
+            <span class="banner letters">for more information, visit my <a target="_blank" href="https://github.com/ibenedetti?tab=repositories">github</a> for more information, visit my <a target="_blank" href="https://github.com/ibenedetti?tab=repositories">github</a> for more information, visit my <a target="_blank" href="https://github.com/ibenedetti?tab=repositories">github</a> </span>            
+        </div>
+        <div class="contact-text">
+            <article>
+                Ready to level up your fitness game? Feel free to reach out to me anytime for the lowdown on my personalized training plans, pricing details, and the awesome services I bring to the table. Let's crush those fitness goals together! 
+            </article>
+        </div>
+
+        <div class="form-container">
+            <form action="submitt" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="phone" name="phone" placeholder="Your Phone number" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Message" class="input-field" spellcheck="false"></textarea>
+                <button type="submit">Contact me</button>
+            </form>
+        </div>
+
+        
+
+    </footer>
+    
+    
+    
+    
+
+    <!-- SEARCH SCRIPT -->
+    <script>
+        const searchButton = document.getElementById("searchButton");
+        const resultsContainer = document.getElementById("results");
+      
+        searchButton.addEventListener("click", async () => {
+          const searchInput = document.getElementById("searchInput").value;
+          const includedTerms = ["chest", "legs", "arms", "shoulders", "back", "forearms", "glutes", "lower back", "lower chest", "upper chest", "quads", "biceps", "triceps", "hamstrings", "rear delts", "front delts", "side delts", "lats"];
+          const apiKey = "AIzaSyDKnzEeDVrPIrGyj6BeWP6RHCd51MDjw4U"; 
+          const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${searchInput}+routine`;
+      
+          try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+      
+            resultsContainer.innerHTML = ""; 
+
+        if (includedTerms.includes(searchInput.toLowerCase())) {
+            data.items.forEach(item => {
+            const videoId = item.id.videoId;
+            const videoTitle = item.snippet.title;
+            const videoThumbnail = item.snippet.thumbnails.medium.url;
+
+            const resultItem = document.createElement("div");
+          resultItem.innerHTML = `
+            <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">
+              <img src="${videoThumbnail}" alt="${videoTitle}">
+              <p>${videoTitle}</p>
+            </a>
+          `;
+          resultsContainer.appendChild(resultItem);
+        });
+        } else {
+            resultsContainer.innerHTML = `<p style="text-transform:uppercase;color:red;font-weight:700;font-size:3em;position:relative;bottom:60vh;" >No results for ${searchInput} found.</p>`;
+                      
+      }
+        } catch (error) {
+        console.error("Error fetching data:", error);
+        }
+    });
+      </script>     
+    <script src="JS/app.js"></script>
+</body>
+</html>

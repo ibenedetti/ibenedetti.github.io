@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Interactive Poster</title>
+    <style>
+        body { 
+            margin: 0; 
+            background-color: white; /* Set the background color of the rest of the website to white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<script src="https://threejs.org/examples/js/loaders/FontLoader.js"></script>
+<script src="https://threejs.org/examples/js/geometries/TextGeometry.js"></script>
+<script>
+    // Basic setup
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight); // Full screen canvas
+    document.body.appendChild(renderer.domElement);
+
+    // OrbitControls for rotation
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.25;
+    controls.screenSpacePanning = false;
+    controls.enableZoom = false; // Disable zoom
+
+    // Add a black wall
+    const wallGeometry = new THREE.PlaneGeometry(20, 20);
+    const wallMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+    const wall = new THREE.Mesh(wallGeometry, wallMaterial);
+    wall.position.set(0, 0, -10);
+    scene.add(wall);
+
+    // Load font and add text
+    const loader = new THREE.FontLoader();
+    loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+        const textGeometry = new THREE.TextGeometry('IVAN R. BENEDETTI. WEB DEVELOPMENT TO THE NEXT LEVEL.', {
+            font: font,
+            size: 0.5,
+            height: 0.1,
+        });
+        const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+        textMesh.position.set(-8, 0, -9.5);
+        scene.add(textMesh);
+    });
+
+    // Add three spheres with reflective material
+    const sphereMaterial = new THREE.MeshPhongMaterial({ 
+        color: 0xffffff,
+        envMap: scene.background,
+        refractionRatio: 0.95
+    });
+    const sphere1 = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 32), sphereMaterial);
+    const sphere2 = new THREE.Mesh(new THREE.SphereGeometry(0.75, 32, 32), sphereMaterial);
+    const sphere3 = new THREE.Mesh(new THREE.SphereGeometry(0.5, 32, 32), sphereMaterial);
+    
+    sphere1.position.set(-2, 0, -5);
+    sphere2.position.set(2, 1, -6);
+    sphere3.position.set(0, -1, -7);
+    
+    scene.add(sphere1);
+    scene.add(sphere2);
+    scene.add(sphere3);
+
+    // Add lighting
+    const ambientLight = new THREE.AmbientLight(0x404040);
+    scene.add(ambientLight);
+    
+    const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+    pointLight.position.set(0, 0, 10);
+    scene.add(pointLight);
+
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+    }
+    
+    // Set the camera position
+    camera.position.set(0, 0, 5);
+
+    // Start the animation loop
+    animate();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    });
+</script>
+</body>
+</html>

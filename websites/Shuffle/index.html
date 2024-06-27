@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuffle</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+<body>
+    <h1>Tire las cartas en un orden que ya haya salido</h1>
+    <button onclick="barajar()">Barajar mazo</button>
+    <button onclick="limpiar()">Limpiar</button>
+    <button onclick="irAHistorico()">Historico</button>
+
+
+    <!-- MAZO DE CARTAS ANIMADO -->
+
+    <div id="deck-container">
+        <img id="card-back" src="CSS/img/card-back.png" alt="Parte Trasera de la Carta">
+    </div>
+
+    <!-- COONTENEDOR DE LAS CARTAS -->
+    <div class="background">
+        <!-- Código de las tablas -->  
+        <table id="table1" style="display: none;">
+            <thead>
+                <tr>
+                    <th>(1)</th>
+                    <th>(2)</th>
+                    <th>(3)</th>
+                    <th>(4)</th>
+                    <th>(5)</th>
+                    <th>(6)</th>
+                    <th>(7)</th>
+                    <th>(8)</th>
+                    <th>(9)</th>
+                    <th>(10)</th>
+                    <th>(11)</th>
+                    <th>(12)</th>
+                    <th>(13)</th>
+                </tr>
+            </thead>
+            <tbody id="table1Body">
+            </tbody>
+        </table>
+
+
+        <table id="table2" style="display: none;">
+            <thead>
+                <tr>
+                    <th>(14)</th>
+                    <th>(15)</th>
+                    <th>(16)</th>
+                    <th>(17)</th>
+                    <th>(18)</th>
+                    <th>(19)</th>
+                    <th>(20)</th>
+                    <th>(21)</th>
+                    <th>(22)</th>
+                    <th>(23)</th>
+                    <th>(24)</th>
+                    <th>(25)</th>
+                    <th>(26)</th>
+                </tr>
+            </thead>
+            <tbody id="table2Body">
+            </tbody>
+        </table>
+        <table id="table3" style="display: none;">
+            <thead>
+                <tr>
+                    <th>(27)</th>
+                    <th>(28)</th>
+                    <th>(29)</th>
+                    <th>(30)</th>
+                    <th>(31)</th>
+                    <th>(32)</th>
+                    <th>(33)</th>
+                    <th>(34)</th>
+                    <th>(35)</th>
+                    <th>(36)</th>
+                    <th>(37)</th>
+                    <th>(38)</th>
+                    <th>(39)</th>
+                </tr>
+            </thead>
+            <tbody id="table3Body">
+            </tbody>
+        </table>
+        <table id="table4" style="display: none;">
+            <thead>
+                <tr>
+                    <th>(40)</th>
+                    <th>(41)</th>
+                    <th>(42)</th>
+                    <th>(43)</th>
+                    <th>(44)</th>
+                    <th>(45)</th>
+                    <th>(46)</th>
+                    <th>(47)</th>
+                    <th>(48)</th>
+                    <th>(49)</th>
+                    <th>(50)</th>
+                    <th>(51)</th>
+                    <th>(52)</th>
+                </tr>
+            </thead>
+            <tbody id="table4Body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="JS/barajar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

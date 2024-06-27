@@ -1,0 +1,304 @@
+/* Estilos para todo el cuerpo */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #292929;
+    color: #e4e4e4;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #000;
+    font-size: 25px;
+    text-shadow: #e4e4e4 0px 0px 20px;
+}
+
+/* Estilos para las tablas */
+table {
+    border-collapse: collapse;
+    width: 90vw;
+    height: 60vh;
+    margin: 20px auto;
+    border: 2px solid silver;
+    border-radius: 25px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+/* Estilos para encabezados de tabla */
+th {
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #555;
+    white-space: nowrap; /* Evita el salto de línea */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+th:hover {
+    background-color: #555;
+}
+
+/* Estilos para celdas de tabla */
+td {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Estilos para la tabla con ID "numberTable" */
+#numberTable {
+    display: none;
+}
+
+#card-back{    
+    width: 50vh;
+    height:50vh;
+}
+
+.background{
+    justify-content: center;
+    align-items: center;
+    background: #4E6A54;
+}
+
+.card-1{
+    background-image: url('img/ace_of_clubs.png');    
+}
+
+.card-2{
+    background-image: url('img/2_of_clubs.png');
+}
+
+.card-3{
+    background-image: url('img/3_of_clubs.png');
+}
+
+.card-4{
+    background-image: url('img/4_of_clubs.png');
+}
+
+.card-5{
+    background-image: url('img/5_of_clubs.png');
+}
+
+.card-6{
+    background-image: url('img/6_of_clubs.png');
+}
+
+.card-7{
+    background-image: url('img/7_of_clubs.png');
+}
+
+.card-8{
+    background-image: url('img/8_of_clubs.png');
+}
+
+.card-9{
+    background-image: url('img/9_of_clubs.png');
+}
+
+.card-10{
+    background-image: url('img/10_of_clubs.png');
+}
+
+.card-11{
+    background-image: url('img/jack_of_clubs.png');
+}
+
+.card-12{
+    background-image: url('img/queen_of_clubs.png');
+}
+
+.card-13{
+    background-image: url('img/king_of_clubs.png');
+}
+
+.card-14{
+    background-image: url('img/ace_of_diamonds.png')!important;
+}
+
+.card-15{
+    background-image: url('img/2_of_diamonds.png');
+}
+
+.card-16{
+    background-image: url('img/3_of_diamonds.png');
+}
+
+
+.card-17{
+    background-image: url('img/4_of_diamonds.png');
+}
+
+
+.card-18{
+    background-image: url('img/5_of_diamonds.png');
+}
+
+.card-19{
+    background-image: url('img/6_of_diamonds.png');
+}
+
+.card-20{
+    background-image: url('img/7_of_diamonds.png');
+}
+
+.card-21{
+    background-image: url('img/8_of_diamonds.png');
+}
+
+.card-22{
+    background-image: url('img/9_of_diamonds.png');
+}
+
+.card-23{
+    background-image: url('img/10_of_diamonds.png');
+}
+
+.card-24{
+    background-image: url('img/jack_of_diamonds.png');
+}
+
+.card-25{
+    background-image: url('img/queen_of_diamonds.png');
+}
+
+.card-26{
+    background-image: url('img/king_of_diamonds.png');
+}
+
+.card-27{
+    background-image: url('img/ace_of_hearts.png');
+}
+
+.card-28{
+    background-image: url('img/2_of_hearts.png');
+}
+
+.card-29{
+    background-image: url('img/3_of_hearts.png');
+}
+
+.card-30{
+    background-image: url('img/4_of_hearts.png');
+}
+
+.card-31{
+    background-image: url('img/5_of_hearts.png');
+}
+
+.card-32{
+    background-image: url('img/6_of_hearts.png');
+}
+
+.card-33{
+    background-image: url('img/7_of_hearts.png');
+}
+
+.card-34{
+    background-image: url('img/8_of_hearts.png');
+}
+
+.card-35{
+    background-image: url('img/9_of_hearts.png');
+}
+
+.card-36{
+    background-image: url('img/10_of_hearts.png');
+}
+
+.card-37{
+    background-image: url('img/jack_of_hearts.png');
+}
+
+.card-38{
+    background-image: url('img/queen_of_hearts.png');
+}
+
+.card-39{
+    background-image: url('img/king_of_hearts.png');
+}
+
+.card-40{
+    background-image: url('img/ace_of_spades.png');
+}
+
+.card-41{
+    background-image: url('img/2_of_spades.png');
+}
+
+.card-42{
+    background-image: url('img/3_of_spades.png');
+}
+
+.card-43{
+    background-image: url('img/4_of_spades.png');
+}
+
+.card-44{
+    background-image: url('img/5_of_spades.png');
+}
+
+.card-45{
+    background-image: url('img/6_of_spades.png');
+}
+
+.card-46{
+    background-image: url('img/7_of_spades.png');
+}
+
+.card-47{
+    background-image: url('img/8_of_spades.png');
+}
+
+.card-48{
+    background-image: url('img/9_of_spades.png');
+}
+
+.card-49{
+    background-image: url('img/10_of_spades.png');
+}
+
+.card-50{
+    background-image: url('img/jack_of_spades.png');
+}   
+
+.card-51{
+    background-image: url('img/queen_of_spades.png');
+}
+
+.card-52{
+    background-image: url('img/king_of_spades.png');
+}
+
+td{
+    background-size: 25vh 50vh;
+    background-repeat: no-repeat;
+    border: 2px solid silver;
+}
+
+td:hover{
+    width: 25vh;
+    height: 50vh;
+}
+

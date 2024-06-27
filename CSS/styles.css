@@ -1,0 +1,646 @@
+*{
+    --body-bg:rgb(35, 35, 73);
+    --shuffle-bg:#040404;
+    --fit-bg:#f3bf92;
+    --ciclope-bg:#e4e4e4;
+    --text1:#e0e0e0;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--body-bg);
+    border: 0;
+    margin: 0;
+}
+
+
+html{
+    scroll-snap-type: proximity y;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.intro{
+    height: 150vh;     
+    width: 120vw; 
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--body-bg);
+    position: relative;
+    font-size: 2em;
+    color:var(--text1);
+    overflow-y: hidden;
+}
+
+.intro h1{
+    height: 25vh!important;
+    z-index: 1;
+}
+
+.intro p{
+    width: 30vh;
+    height: 70vh;
+    position: relative;
+    right: 45vw;
+    top: 30vh;
+}
+
+.intro h3{
+    height: 20vh;
+    z-index: 1;
+}
+
+.canvas-container{
+    position: absolute;
+    height: 150vh;
+    top: 20vh;
+    width: 70vw;
+    right: 10vw;
+    overflow-y: hidden;
+}
+
+#source-canvas {
+    display: none;
+  }
+
+#target-canvas{
+    position: absolute;
+    height: 80vw;
+    width: 70vw;
+    right: 10vw;
+    overflow-y: hidden;
+}
+
+
+
+.title-with-lines {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    right: 30vw;
+    height: 20vh;
+  }
+  
+  .title-with-lines::before,
+  .title-with-lines::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid var(--text1); 
+    margin: 0 10px; 
+    width: 50vh;
+  }
+
+  .intro .title-with-lines::before,
+  .title-with-lines::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid var(--text1)!important; 
+    margin: 0 10px; 
+    width: 50vh;
+  }
+
+ 
+
+
+
+/* GALLERY ENDS */
+
+
+
+
+
+/* ON SCROLL ANIMATION */
+
+
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+
+
+/* END OF ON SCROLL ANIMATION */
+
+
+/* SHUFFLE */
+
+.shuffle{
+    display: flex;
+    flex-direction: column;
+    color: var(--text1);
+    background-color: var(--shuffle-bg);
+    height: 300vh;
+    scroll-snap-align: start;
+}
+
+.shuffle h2{
+    background: var(--shuffle-bg);
+    font-size: 3em;
+    z-index: 1;
+}
+
+.shuffle 
+.title-with-lines::after {
+    opacity:0;
+}
+
+.shuffle article{
+    width: 70vh;
+    height: 30vh;
+    position: relative;
+    left: 15vh;
+    background: var(--shuffle-bg);
+    font-size: 2em;
+    color: var(--text1);
+}
+
+iframe{
+    height: 50vh!important;
+    overflow: hidden;
+}
+
+iframe body{
+    overflow: hidden;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    height: 50vh;
+    position: relative;
+    background-color: var(--shuffle-bg);
+    left: 50%;
+    top: 10vh;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track  > .image {
+    width: 40vmin;
+    height: 45vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+
+  .shuffle a{
+    background: var(--shuffle-bg);
+    font-size: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--text1);
+    transition:  0.3s ease-out;
+  }
+
+  .shuffle a:hover{
+    text-decoration: none;
+    color: var(--text1);
+    font-size: 3.5em;
+  }
+
+  @keyframes bounce {
+    0%,20%,50%,80%,to {
+        transform: translateZ(-2px) translateY(5px)
+    }
+
+    40% {
+        transform: rotateY(180deg) translateZ(-2px) translateY(-35px)
+    }
+
+    60% {
+        transform: translateZ(-2px) translateY(-25px)
+    }
+};
+
+body {
+background-color: #1a1a1a;
+ background: radial-gradient(circle at center,#1a1546,#040411 40%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ width: 100%;
+  perspective: 1000px;
+}
+
+.bounce {
+    font-size: 3.5rem;
+    line-height: 100%;    
+    background: transparent;
+    scale: 0.5;
+    height: 30vh;
+   transform: rotateX(0) rotateY(-25deg);
+    text-transform: uppercase;
+    width: 500px;
+ text-align: center;
+    color: var(--text1);
+    font-family: "Zefani";
+ font-family: 'Abril Fatface';
+    position: relative;
+    left: 35vw;
+    bottom: 20vh;
+    padding: 2rem 0 9rem;
+
+
+}
+
+.bounce span {
+    display: inline-block;
+    background: transparent;
+    line-height: 10vh;
+    width: 100%;
+}
+
+
+.scroll-more {
+    color: var(--text1);
+    text-align: center;    
+    background: transparent;
+    line-height: 0.4;
+    overflow-y: hidden;
+    height: 25vh;
+    width: 450px;
+    position: absolute;
+    /* bottom: 8rem; */
+    /* left: calc(50% - 225px);s */
+    /* margin: 0 auto;s */
+    font-size: 25rem;
+    opacity: 1;
+    transition: opacity .3s ease;
+    font-family: monospace;
+    pointer-events: none;
+    z-index: -1;
+    transform-origin: center;
+    -webkit-animation: bounce 3s cubic-bezier(.37,0,.21,1.02) infinite,fonts 5s linear infinite;
+    animation: bounce 3s cubic-bezier(.37,0,.21,1.02) infinite,fonts 5s linear infinite;
+}
+
+
+/* END OF SHUFFLE */
+
+
+
+/* FITSITE BEGINS */
+
+
+.fit{
+    background: var(--fit-bg);
+    scroll-snap-align: start;
+}
+
+.fit .bounce{
+    color:var(--shuffle-bg);
+}
+
+.fit .scroll-more{
+    color:var(--shuffle-bg);
+}
+
+.fit h2{
+    background: var(--fit-bg);
+    font-size: 3em;
+}
+
+.fit article{
+    width: 70vh;
+    height: 30vh;
+    position: relative;
+    left: 15vh;
+    background: var(--fit-bg);
+    font-size: 2em;
+    color: var(--shuffle-bg);
+}
+
+.fit   .title-with-lines::before,
+.title-with-lines::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid var(--shuffle-bg); 
+  margin: 0 10px; 
+  width: 50vh;
+}
+
+.fit 
+.title-with-lines::after {
+    opacity:0;
+}
+
+
+#image-track2 {
+    display: flex;
+    gap: 4vmin;
+    background: transparent;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -30%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track2  > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+
+
+  .fit a{
+    background: transparent;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--shuffle-bg);
+    left: 33vw;
+    position: relative;
+    bottom: 20vh;
+    transition:  0.3s ease-out;
+  }
+
+  .fit a:hover{
+    text-decoration: none;
+    color: var(--shuffle-bg);
+    font-size: 3.5em;
+  }
+
+
+
+
+/* END OF FITSITE */
+
+
+
+
+
+/* START OF CICLOPE */
+
+
+.ciclope{
+    background: var(--ciclope-bg);
+    scroll-snap-align: start;
+}
+
+.ciclope .bounce{
+    color:var(--shuffle-bg);
+}
+
+.ciclope .scroll-more{
+    color:var(--shuffle-bg);
+}
+
+.ciclope h2{
+    background: var(--ciclope-bg);
+    font-size: 3em;
+}
+
+.ciclope article{
+    width: 70vh;
+    height: 30vh;
+    position: relative;
+    left: 15vh;
+    background: var(--ciclope-bg);
+    font-size: 2em;
+    color: var(--shuffle-bg);
+}
+
+.ciclope   .title-with-lines::before,
+.title-with-lines::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid var(--shuffle-bg); 
+  margin: 0 10px; 
+  width: 50vh;
+}
+
+.ciclope 
+.title-with-lines::after {
+    opacity:0;
+}
+
+#image-track3 {
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    background: transparent;
+    top: 50%;
+    transform: translate(0%, -10%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track3  > .image {
+    width: 40vmin;
+    height: 56vmin;
+    background: transparent;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+
+  .ciclope a{
+    background: transparent;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--shuffle-bg);
+    left: 33vw;
+    position: relative;
+    bottom: 20vh;
+    transition:  0.3s ease-out;
+  }
+
+  .ciclope a:hover{
+    text-decoration: none;
+    color: var(--shuffle-bg);
+    font-size: 3.5em;
+  }
+
+/* END OF CICLOPE */
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 720px) {
+    .intro{
+        height: 150vh;     
+        width: 120vw; 
+        display: flex;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--body-bg);
+        position: relative;
+        font-size: 1em;
+        color:var(--text1);
+        overflow-y: hidden;
+    }
+
+    .intro h1{
+        right: 10vw;
+    }
+
+    .intro p{
+        right: 5vw;
+        font-size: 1.5em;
+    }
+
+    .canvas-container{
+        display: none;
+    }
+
+
+
+    /* SHUFFLE */
+    .shuffle{
+        font-size: 0.7em;
+    }
+
+    .shuffle h2{
+        left:10vw;
+    }
+
+    .shuffle article {
+        width: 50vh;
+        height: 30vh;
+        position: relative;
+        left: 1vh;
+        background: var(--shuffle-bg);
+        font-size: 2em;
+        color: var(--text1);
+    }
+
+    .bounce{
+        left:0;
+    }
+
+    .shuffle a:hover{
+        font-size: 3.1em;
+    }
+
+
+
+
+
+    /* FIT */
+
+
+
+
+    .fit{
+        font-size: 0.7em;
+    }
+
+    .fit h2{
+        left:10vw;
+    }
+
+    .fit article {
+        width: 50vh;
+        height: 30vh;
+        position: relative;
+        left: 1vh;
+        background: var(--fit-bg);
+        font-size: 2em;
+        color: var(--shuffle-bg);
+    }
+
+    .bounce{
+        left:0;
+    }
+
+    .fit a {
+        background: transparent;
+        font-size: 3em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: var(--shuffle-bg);
+        left: 5vw;
+        position: relative;
+        bottom: 20vh;
+        transition: 0.3s ease-out;
+    }
+
+    .fit a:hover{
+        font-size: 3.1em;
+    }
+
+
+
+    /* CICLOPE */
+
+
+
+
+
+    .ciclope{
+        font-size: 0.7em;
+    }
+
+    .ciclope h2{
+        left:10vw;
+    }
+
+    .ciclope article {
+        width: 50vh;
+        height: 30vh;
+        position: relative;
+        left: 1vh;
+        background: var(--ciclope-bg);
+        font-size: 2em;
+        color: var(--shuffle-bg);
+    }
+
+    .bounce{
+        left:0;
+    }
+
+    .ciclope a {
+        background: transparent;
+        font-size: 3em;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: var(--shuffle-bg);
+        left: 5vw;
+        position: relative;
+        bottom: 20vh;
+        transition: 0.3s ease-out;
+    }
+
+    .ciclope a:hover{
+        font-size: 3.1em;
+    }
+
+
+
+
+
+
+}
